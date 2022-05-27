@@ -42,12 +42,12 @@ const Login = () => {
           localStorage.removeItem("user");
         } else {
           localStorage.setItem("user", JSON.stringify(data));
-          navigate("/homepage");
           setAuth(true);
           setShowError(false);
           dispatch(
             login({ firstName: data.firstName, lastName: data.lastName })
-          );
+            );
+            navigate("/homepage");
         }
       });
   };

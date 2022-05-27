@@ -20,12 +20,12 @@ import HomeIcon from "@mui/icons-material/Home";
 
 import "./Drawer.css";
 import { useSelector } from "react-redux";
-import drawerHeaderLogo from "../../../Assets/icons/drawer-header-logo.svg";
-import coworkersIcon from "../../../Assets/icons/coworkers-icon.svg";
-import inquiryIcon from "../../../Assets/icons/inquiry-icon.svg";
-import announceIcon from "../../../Assets/icons/announce-icon.svg";
-import settingsIcon from "../../../Assets/icons/settings-icon.svg";
-import { themeCustom } from "../../../Assets/styles/theme";
+import drawerHeaderLogo from "../../Assets/icons/drawer-header-logo.svg";
+import coworkersIcon from "../../Assets/icons/coworkers-icon.svg";
+import inquiryIcon from "../../Assets/icons/inquiry-icon.svg";
+import announceIcon from "../../Assets/icons/announce-icon.svg";
+import settingsIcon from "../../Assets/icons/settings-icon.svg";
+import { themeCustom } from "../../Assets/styles/theme";
 import { ThemeProvider } from "@emotion/react";
 
 const drawerWidth = 240;

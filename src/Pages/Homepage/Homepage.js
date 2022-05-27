@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import "./Homepage.css";
-import MiniDrawer from "./Drawer/Drawer";
+import MiniDrawer from "../../modules/Drawer/Drawer"
 const Homepage = () => {
   const navigate = useNavigate();
   const userLocal = localStorage.getItem("user");
