@@ -45,7 +45,7 @@ const Login = () => {
           setAuth(true);
           setShowError(false);
           dispatch(
-            login({ firstName: data.firstName, lastName: data.lastName })
+            login(data)
             );
             navigate("/homepage");
         }

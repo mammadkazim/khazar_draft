@@ -18,4 +18,20 @@ export const themeCustom = createTheme({
       main: "#fff",
     },
   },
+  typography: {
+    body1: {
+      fontSize: "14px"
+    },
+    h1: {
+      color: "#424242",
+      fontSize: "14px",
+      fontWeight: 500
+    },
+    h2: {
+      color: "#424242",
+      fontSize: "14px"
+    },
+  },
+  shadows:"none"
+
 });

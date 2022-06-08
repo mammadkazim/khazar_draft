@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import MiniDrawer from "../../modules/Drawer/Drawer";
 
 const Employees = () => {
   return (
-    <div>Employees</div>
+    <>
+    <MiniDrawer>
+   
+    </MiniDrawer>
+  </>
   )
-}
+};
 
-export default Employees
+export default Employees;

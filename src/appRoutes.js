@@ -6,7 +6,7 @@ export const appRoutes = [
   },
   {
     component: "Homepage",
-    breadcrumb: ["App", "Homepage"],
+    breadcrumb: ["App", "Əsas səhifə"],
     url: "/homepage",
     isIndex: true,
   },

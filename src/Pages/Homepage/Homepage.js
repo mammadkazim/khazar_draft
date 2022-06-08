@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import "./Homepage.css";
-import MiniDrawer from "../../modules/Drawer/Drawer"
+import Table from "./Table";
+import MiniDrawer from "../../modules/Drawer/Drawer";
 const Homepage = () => {
   const navigate = useNavigate();
   const userLocal = localStorage.getItem("user");
@@ -13,95 +13,93 @@ const Homepage = () => {
       return navigate("/");
     }
   }, []);
-  return (
-    <>
-      <MiniDrawer>
-        <Box component="main" sx={{ flexGrow: 1, p: 3, my: 7 }}>
-          <Typography paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-            dolor purus non enim praesent elementum facilisis leo vel. Risus at
-            ultrices mi tempus imperdiet. Semper risus in hendrerit gravida
-            rutrum quisque non tellus. Convallis convallis tellus id interdum
-            velit laoreet id donec ultrices. Odio morbi quis commodo odio aenean
-            sed adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-            integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-            eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-            quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-            vivamus at augue. At augue eget arcu dictum varius duis at
-            consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-            donec massa sapien faucibus et molestie ac. Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Rhoncus dolor purus non enim
-            praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-            imperdiet. Semper risus in hendrerit gravida rutrum quisque non
-            tellus. Convallis convallis tellus id interdum velit laoreet id
-            donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing.
-            Amet nisl suscipit adipiscing bibendum est ultricies integer quis.
-            Cursus euismod quis viverra nibh cras. Metus vulputate eu
-            scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-            imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus
-            at augue. At augue eget arcu dictum varius duis at consectetur
-            lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-            sapien faucibus et molestie ac. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent
-            elementum facilisis leo vel. Risus at ultrices mi tempus imperdiet.
-            Semper risus in hendrerit gravida rutrum quisque non tellus.
-            Convallis convallis tellus id interdum velit laoreet id donec
-            ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet
-            nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus
-            euismod quis viverra nibh cras. Metus vulputate eu scelerisque felis
-            imperdiet proin fermentum leo. Mauris commodo quis imperdiet massa
-            tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At
-            augue eget arcu dictum varius duis at consectetur lorem. Velit sed
-            ullamcorper morbi tincidunt. Lorem donec massa sapien faucibus et
-            molestie ac. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Rhoncus dolor purus non enim praesent elementum facilisis
-            leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in
-            hendrerit gravida rutrum quisque non tellus. Convallis convallis
-            tellus id interdum velit laoreet id donec ultrices. Odio morbi quis
-            commodo odio aenean sed adipiscing. Amet nisl suscipit adipiscing
-            bibendum est ultricies integer quis. Cursus euismod quis viverra
-            nibh cras. Metus vulputate eu scelerisque felis imperdiet proin
-            fermentum leo. Mauris commodo quis imperdiet massa tincidunt. Cras
-            tincidunt lobortis feugiat vivamus at augue. At augue eget arcu
-            dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi
-            tincidunt. Lorem donec massa sapien faucibus et molestie ac. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor
-            purus non enim praesent elementum facilisis leo vel. Risus at
-            ultrices mi tempus imperdiet. Semper risus in hendrerit gravida
-            rutrum quisque non tellus. Convallis convallis tellus id interdum
-            velit laoreet id donec ultrices. Odio morbi quis commodo odio aenean
-            sed adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-            integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-            eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-            quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-            vivamus at augue. At augue eget arcu dictum varius duis at
-            consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-            donec massa sapien faucibus et molestie ac.
-          </Typography>
-          <Typography paragraph>
-            Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-            ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-            elementum integer enim neque volutpat ac tincidunt. Ornare
-            suspendisse sed nisi lacus sed viverra tellus. Purus sit amet
-            volutpat consequat mauris. Elementum eu facilisis sed odio morbi.
-            Euismod lacinia at quis risus sed vulputate odio. Morbi tincidunt
-            ornare massa eget egestas purus viverra accumsan in. In hendrerit
-            gravida rutrum quisque non tellus orci ac. Pellentesque nec nam
-            aliquam sem et tortor. Habitant morbi tristique senectus et.
-            Adipiscing elit duis tristique sollicitudin nibh sit. Ornare aenean
-            euismod elementum nisi quis eleifend. Commodo viverra maecenas
-            accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam
-            ultrices sagittis orci a.
-          </Typography>
-        </Box>
-      </MiniDrawer>
-    </>
-  );
+
+  const [users, setUsers] = useState();
+
+  useEffect(() => {
+    fetch("https://dummyjson.com/users?limit=5")
+      .then((res) => res.json())
+      .then((data) => setUsers(data.users));
+  }, []);
+  if (users)
+    return (
+      <>
+        <MiniDrawer>
+          <Box component="main" sx={{ position: "relative", pt: "54px" }}>
+            <Table
+              title="Son sorgular"
+              headerData={["Adı", "Tipi", "Tarixi", "Statusu"]}
+              bodyData={users.map((item) => [
+                `${item.firstName} ${item.lastName}`,
+                `${item.maidenName}`,
+                `${item.birthDate}`,
+                `${item.address.city}`,
+              ])}
+            />
+            <Table
+              title="Mənim sorgularım"
+              headerData={["Tipi", "Tarixi", "Statusu"]}
+              bodyData={users.map((item) => [
+                `${item.maidenName}`,
+                `${item.birthDate}`,
+                `${item.address.city}`,
+              ])}
+            />
+            <Table
+              title="Əməkdaşlar haqqında son məlumat"
+              headerData={["Adı", "Vəzifə", "Status"]}
+              bodyData={users.map((item) => [
+                `${item.firstName} ${item.lastName}`,
+                `${item.company.title}`,
+                `${item.bank.cardType}`,
+              ])}
+            />
+            <Table
+              title="Qarşıdan gələn ildönümü"
+              headerData={["Adı", "İl", "Tarixi"]}
+              bodyData={users.map((item) => [
+                `${item.firstName} ${item.lastName}`,
+                `${item.height}`,
+                `${item.birthDate}`,
+              ])}
+            />
+            <Table
+              title="Bu günki Day off-lar"
+              headerData={["Adı", "Tipi"]}
+              bodyData={users.map((item) => [
+                `${item.firstName} ${item.lastName}`,
+                `${item.bank.cardType}`,
+              ])}
+            />
+            <Table
+              title="Məzuniyyət məlumatı"
+              headerData={["Adı", "Tarixi","Əvəzedici şəxs"]}
+              bodyData={users.map((item) => [
+                `${item.firstName} ${item.lastName}`,
+                `${item.birthDate}`,
+                `${item.firstName} ${item.lastName}`,
+              ])}
+            />
+            <Table
+              title="Növbəti ad günləri"
+              headerData={["Adı", "Tarixi"]}
+              bodyData={users.map((item) => [
+                `${item.firstName} ${item.lastName}`,
+                `${item.birthDate}`,
+              ])}
+            />
+            <Table
+              title="Ezamiyyət"
+              headerData={["Adı", "Tarixi"]}
+              bodyData={users.map((item) => [
+                `${item.firstName} ${item.lastName}`,
+                `${item.birthDate}`,
+              ])}
+            />
+          </Box>
+        </MiniDrawer>
+      </>
+    );
 };
 
 export default Homepage;
